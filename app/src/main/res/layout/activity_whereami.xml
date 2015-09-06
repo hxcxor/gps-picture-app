@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Programmer: Jonathan Trapane
+Class ID: jtrapa4027
+Lab #5: Maps, Hardware, Network, SMS,
+Wireless (Communications), and some Widgets
+CIS 4700: Mobile Commerce Development
+Spring 2015
+Due date: 04/10/15
+Date completed: 04/10/15
+*************************************
+* Program Explanation
+* Lab5 provides several functionalities
+* to users. The user can open a clock widget,
+* User can shake device to close clock widget.
+* take a picture and apply a filter, and
+* map their current lat/long. A proximity
+* alert is displayed when near HCOB. Photo
+* can be shared via Bluetooth.
+*************************************
+-->
+    <!-- Linear layout -->
+
+
+
+    <!-- Nested linear layout -->
+
+    <!-- Id is linearLayoutGPS. Width
+     and height wraps content. Orientation
+       is vertical.-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayoutGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Textview for latitude label. Height and
+        width wrap content. Calls string "latLabel".
+        Text size 15sp. -->
+
+        <TextView
+            android:id="@+id/txtViewLabelLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latLabel"
+            android:textSize="15sp"
+            >
+        </TextView>
+
+        <!-- Textview for latitude display. Height
+        and weight wrap content. Text calls string
+        "unknown" and is size 15sp. Column 1 and
+         row 0. Bottom padding of 25dp to create
+         space. -->
+
+        <TextView
+            android:id="@+id/txtViewLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unknown"
+            android:textSize="15sp"
+            android:paddingBottom="25dp">
+        </TextView>
+
+
+        <!-- Textview for longitude label. Height and
+        width wrap content. Text is 15sp. Calls string
+        "longLabel". Text size is 15sp. -->
+
+        <TextView
+            android:id="@+id/txtViewLabelLongitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/longLabel"
+            android:textSize="15sp">
+        </TextView>
+
+        <!-- Textview for longitude display. Height
+        and width wrap content. Text calls string
+        "unknown" and is size 15sp. Bottom padding
+         of 25dp.-->
+
+        <TextView
+            android:id="@+id/txtViewLongitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unknown"
+            android:textSize="15sp"
+            android:paddingBottom="25dp">
+        </TextView>
+
+        <!-- Textview for address label. Height and
+            width wrap content. Calls string
+            "addressLabel". Text size is 15sp.-->
+
+        <TextView
+            android:id="@+id/txtViewLabelAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addressLabel"
+            android:textSize="15sp">
+        </TextView>
+
+        <!-- Textview for address display. Height
+        and width wrap content. Text calls string
+        "unknown" and is size 15sp. -->
+
+        <TextView
+            android:id="@+id/txtViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unknown"
+            android:textSize="15sp">
+        </TextView>
+    </LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Programmer: Jonathan Trapane
+Class ID: jtrapa4027
+Lab #5: Maps, Hardware, Network, SMS,
+Wireless (Communications), and some Widgets
+CIS 4700: Mobile Commerce Development
+Spring 2015
+Due date: 04/10/15
+Date completed: 04/10/15
+*************************************
+* Program Explanation
+* Lab5 provides several functionalities
+* to users. The user can open a clock widget,
+* User can shake device to close clock widget.
+* take a picture and apply a filter, and
+* map their current lat/long. A proximity
+* alert is displayed when near HCOB. Photo
+* can be shared via Bluetooth.
+*************************************
+-->
+
+    <!-- Linear Layout for GPS widget -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Nested Linear layout -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dip">
+
+        <!-- Imageview to display widget icon.
+        Height and width of 100dp. Centered horizontally. -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/widgeticon"/>
+
+        <!-- Textview to display GPS coordinates. Height
+        and width fill parent. Id is txtinfo. Text calls
+        string gps_coord. Gravity is centered. -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/txtInfo"
+            android:text="@string/gps_coord"
+            android:gravity="center_horizontal|center_vertical"/>
+
+    </LinearLayout>
+
+</LinearLayout>

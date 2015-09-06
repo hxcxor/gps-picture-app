@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Programmer: Jonathan Trapane
+Class ID: jtrapa4027
+Lab #5: Maps, Hardware, Network, SMS,
+Wireless (Communications), and some Widgets
+CIS 4700: Mobile Commerce Development
+Spring 2015
+Due date: 04/10/15
+Date completed: 04/10/15
+*************************************
+* Program Explanation
+* Lab5 provides several functionalities
+* to users. The user can open a clock widget,
+* User can shake device to close clock widget.
+* take a picture and apply a filter, and
+* map their current lat/long. A proximity
+* alert is displayed when near HCOB. Photos
+* can be shared via Bluetooth.
+*************************************
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.wmich.lab5jtrapa4027" >
+
+    <!-- Changed theme to Holo.Light -->
+    <!-- Internet permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Fine and coarse location permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Camera permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Require camera feature -->
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <!-- Bluetooth permissions -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Declare activities -->
+        <activity android:name="edu.wmich.lab5jtrapa4027.GPSAppWidgetExample"
+            android:label="@string/app_name"/>
+        <activity android:name="edu.wmich.lab5jtrapa4027.PictureActivity"
+            android:label="@string/app_name"/>
+
+        <activity android:name="edu.wmich.lab5jtrapa4027.WhereAmIFragment"
+            android:label="@string/app_name"/>
+
+
+        <receiver android:name=".GPSWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@layout/gpswidgetinfo" />
+        </receiver>
+
+        <service android:name=".GPSWidgetProvider$GPSWidgetService"></service>
+
+    </application>
+
+</manifest>

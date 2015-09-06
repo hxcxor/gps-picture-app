@@ -1,0 +1,41 @@
+<!--
+Programmer: Jonathan Trapane
+Class ID: jtrapa4027
+Lab #5: Maps, Hardware, Network, SMS,
+Wireless (Communications), and some Widgets
+CIS 4700: Mobile Commerce Development
+Spring 2015
+Due date: 04/10/15
+Date completed: 04/10/15
+*************************************
+* Program Explanation
+* Lab5 provides several functionalities
+* to users. The user can open a clock widget,
+* User can shake device to close clock widget.
+* take a picture and apply a filter, and
+* map their current lat/long. A proximity
+* alert is displayed when near HCOB. Photo
+* can be shared via Bluetooth.
+*************************************
+-->
+
+<resources>
+    <string name="app_name">Lab5jtrapa4027</string>
+    <string name="action_settings">Settings</string>
+    <!-- String for clock button -->
+    <string name="buttonGPSWidget">GPS Widget!</string>
+    <!-- String for picture button -->
+    <string name="buttonPicture">Picture!</string>
+    <!-- String for where am i button -->
+    <string name="buttonWhereAmI">Where Am I?</string>
+    <!-- String for latitude label -->
+    <string name="latLabel">Latitude:</string>
+    <!-- String for longitude label -->
+    <string name="longLabel">Longitude:</string>
+    <!-- string name for address label -->
+    <string name="addressLabel">Address:</string>
+    <!-- String for unknown coordinates -->
+    <string name="unknown">Unknown</string>
+    <!-- String for gps info -->
+    <string name="gps_coord">Waiting for GPS coordinates.</string>
+</resources>

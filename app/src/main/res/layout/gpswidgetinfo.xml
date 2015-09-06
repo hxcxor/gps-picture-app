@@ -1,0 +1,33 @@
+<!--
+Programmer: Jonathan Trapane
+Class ID: jtrapa4027
+Lab #5: Maps, Hardware, Network, SMS,
+Wireless (Communications), and some Widgets
+CIS 4700: Mobile Commerce Development
+Spring 2015
+Due date: 04/10/15
+Date completed: 04/10/15
+*************************************
+* Program Explanation
+* Lab5 provides several functionalities
+* to users. The user can open a clock widget,
+* User can shake device to close clock widget.
+* take a picture and apply a filter, and
+* map their current lat/long. A proximity
+* alert is displayed when near HCOB. Photo
+* can be shared via Bluetooth.
+*************************************
+-->
+
+    <!-- App widget provider for widget. Min width is 294dp
+    and min height is 72 dp. Updates every 90000 milliseconds.
+    Initial layout calls gpswidget and height/weight wrap content. -->
+
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="294dp"
+    android:minHeight="72dp"
+    android:updatePeriodMillis="900000"
+    android:initialLayout="@layout/gpswidget"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+</appwidget-provider>

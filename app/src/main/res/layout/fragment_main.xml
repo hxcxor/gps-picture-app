@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Programmer: Jonathan Trapane
+Class ID: jtrapa4027
+Lab #5: Maps, Hardware, Network, SMS,
+Wireless (Communications), and some Widgets
+CIS 4700: Mobile Commerce Development
+Spring 2015
+Due date: 04/10/15
+Date completed: 04/10/15
+*************************************
+* Program Explanation
+* Lab5 provides several functionalities
+* to users. The user can open a clock widget,
+* User can shake device to close clock widget.
+* take a picture and apply a filter, and
+* map their current lat/long. A proximity
+* alert is displayed when near HCOB. Photo
+* can be shared via Bluetooth.
+*************************************
+-->
+
+
+
+    <!-- Relative layout for main screen. Width
+     matches parent and height wraps content.
+     Orientation is vertical. Default margins. -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:useDefaultMargins="true" >
+
+    <!-- Button for GPS widget. Width matches parent.
+     Height wraps content and gravity fills horizontal. .
+     Calls string "buttonGPSWidget". Id is "buttonGPSWidget" -->
+
+    <Button
+        android:id="@+id/buttonGPSWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonGPSWidget"
+    />
+
+    <!-- Button for picture function. Width matches parent
+     and gravity fills horizontal.Calls string "buttonPicture".
+     Id is "buttonPicture". Laid out below GPS button. -->
+
+    <Button
+        android:id="@+id/buttonPicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonGPSWidget"
+        android:text="@string/buttonPicture"
+        />
+
+    <!-- Button for Where Am I function. Width
+    matches and height wraps content. Calls string
+    "buttonWhereAmI". Id is "buttonWhereAmI". Laid out
+     below picture button.-->
+
+    <Button
+        android:id="@+id/buttonWhereAmI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonPicture"
+        android:text="@string/buttonWhereAmI"
+        />
+
+    </RelativeLayout>
